@@ -42,8 +42,7 @@ const customers = [
 const getMostExpensivePurchase = (customers, customerId) => {
     const customer = customers.find(selectedCustomer => selectedCustomer.id === customerId);
     if(!customer || !customer.orders.length) {
-        console.log('There are no customer orders with that ID number');
-        return ;
+       return 'There are no customer orders with that ID number';
     };
     const mostExpensivePurchase = customer.orders.reduce((maxPurchase, order) =>  
         order.amount > maxPurchase.amount
@@ -81,10 +80,10 @@ const getAverageItems = (customers) => {
 }
 
 
-console.log(getMostExpensivePurchase(customers, 1));
+// console.log(getMostExpensivePurchase(customers, 1));
 console.log(getMostExpensivePurchase(customers, 3));
-console.log(getMostExpensivePurchase(customers, 2));
-console.log(getAveragePurchaseAmount(customers, 1));
-console.log(getAveragePurchaseAmount(customers, 2));
-console.log(getAverageItems(customers));
+// console.log(getMostExpensivePurchase(customers, 2));
+// console.log(getAveragePurchaseAmount(customers, 1));
+// console.log(getAveragePurchaseAmount(customers, 2));
+// console.log(getAverageItems(customers));
 
