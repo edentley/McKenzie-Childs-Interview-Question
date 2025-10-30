@@ -54,7 +54,7 @@ const getMostExpensivePurchase = (customers, customerId) => {
 }
 const getAveragePurchaseAmount = (customers,customerId) => {
     const customer = customers.find(selectedCustomer => selectedCustomer.id === customerId);
-    if(!customer || !customer.orders) {
+    if(!customer || !customer.orders.lenght) {
         console.log('There are no customer orders with that ID number');
         return;
     };
